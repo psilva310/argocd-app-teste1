@@ -1,0 +1,32 @@
+app-templ-1:
+  replicaCount: 3
+
+  namespace: production
+
+  image:
+    repository: nginx
+    pullPolicy: IfNotPresent
+
+  containerPort: 80
+  service:
+    type: ClusterIP
+    port: 80
+
+  livenessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
+  readinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
+
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "300m"
+    limits:
+      memory: "256Mi"
+      cpu: "500m"

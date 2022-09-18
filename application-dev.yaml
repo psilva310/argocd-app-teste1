@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    path: subcharts/dev/
+    path: charts/dev/
     repoURL: https://github.com/psilva310/argocd-app-teste1.git
   destination:
     server: "https://kubernetes.default.svc"
