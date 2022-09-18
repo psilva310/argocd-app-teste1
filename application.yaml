@@ -8,6 +8,7 @@ spec:
   source:
     path: charts/prd/
     repoURL: https://github.com/psilva310/argocd-app-teste1.git
+    targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
     namespace: production
