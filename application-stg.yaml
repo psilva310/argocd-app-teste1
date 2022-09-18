@@ -8,6 +8,7 @@ spec:
   source:
     path: charts/stg/
     repoURL: https://github.com/psilva310/argocd-app-teste1.git
+    targetRevision: staging
   destination:
     server: "https://kubernetes.default.svc"
     namespace: staging
