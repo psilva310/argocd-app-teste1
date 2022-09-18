@@ -8,6 +8,7 @@ spec:
   source:
     path: charts/dev/
     repoURL: https://github.com/psilva310/argocd-app-teste1.git
+    targetRevision: development
   destination:
     server: "https://kubernetes.default.svc"
     namespace: development
