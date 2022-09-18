@@ -1,5 +1,5 @@
 app-templ-1:
-  replicaCount: 2
+  replicaCount: 3
 
   namespace: staging
 
