@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-app-teste1-staging
+  namespace: staging
+spec:
+  project: default
+  source:
+    path: subcharts/stg/
+    repoURL: https://github.com/psilva310/argocd-app-teste1.git
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: staging
