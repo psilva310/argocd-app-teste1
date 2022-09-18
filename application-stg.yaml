@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argocd-app-teste1-staging
-  namespace: staging
+  namespace: argocd
 spec:
   project: default
   source:
@@ -11,3 +11,9 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: staging
+  syncPolicy:
+    syncOptions:
+    -  CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
